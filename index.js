@@ -109,7 +109,6 @@ function outputHTML(fileName, data) {
             if(error){ return console.error(error.message); }
             console.log('Output directory created successfully');
           
-   
     });
     }
 
@@ -160,7 +159,7 @@ function showNextAction() {
 
                     const renderToHTML = render(team); 
    
-                      console.log(outputPath);
+                      
                       outputHTML(outputPath, renderToHTML);
                       
                        
