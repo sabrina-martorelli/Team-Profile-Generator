@@ -82,7 +82,7 @@ const questionsIntern = [
     },
     {
         type: 'input',
-        name: 'internGithub',
+        name: 'internSchool',
         message: "Intern's Shool",
     }
 ];
@@ -104,8 +104,8 @@ function addIntern() {
     inquirer.prompt (questionsIntern) 
     .then (data => {
 
-        //create object
-
+        const intern = new Intern (data.internName, data.internId, data.internEmail, data.internSchool);
+        team.push(intern);
         showNextAction ();
 
 
@@ -119,8 +119,9 @@ function addEngineer() {
     inquirer.prompt (questionsEngineer) 
     .then (data => {
 
-        //create object
-
+        
+        const engineer = new Engineer (data.engineerName, data.engineerId, data.engineerEmail, data.engineersGithub);
+        team.push(engineer);
         showNextAction ();
 
 
@@ -165,11 +166,9 @@ function generateTeam (){
 inquirer.prompt (questionsManager)
     .then(data => {
 
-        console.log(data);
+       
         const manager = new Manager (data.managerName, data.managerId, data.managerEmail, data.managerOffice);
-        console.log(manager);
         team.push(manager);
-        console.log(team);
         showNextAction();
 
     });
