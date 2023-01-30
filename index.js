@@ -100,7 +100,7 @@ const questionsActions = [
 
 
 // Function to create README file
-function writeToFile(fileName, data) {
+function outputHTML(fileName, data) {
 
     //Check if folder exist
     if (!fs.existsSync(OUTPUT_DIR)) {
@@ -110,7 +110,7 @@ function writeToFile(fileName, data) {
             console.log('Output directory created successfully');
           
    
-    };
+    });
     }
 
     //Creates file using data
@@ -158,11 +158,10 @@ function showNextAction() {
                     }
                     else {
 
-                        const renderToHTML = render(team); 
-
-                       
-                     console.log(outputPath);
-                       // writeToFile(outputPath, renderToHTML);
+                    const renderToHTML = render(team); 
+   
+                      console.log(outputPath);
+                      outputHTML(outputPath, renderToHTML);
                       
                        
                     }
