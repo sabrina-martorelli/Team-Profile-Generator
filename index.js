@@ -13,7 +13,100 @@ const render = require("./src/page-template.js");
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
+
 //separate functions in different files if needed. One per menu 
+
+
+const questionsManager = [
+    {
+        type: 'input',
+        name: 'managerName',
+        message: "Team manager's Name",
+    },
+    {
+        type: 'input',
+        name: 'managerId',
+        message: "Team manager's Id",
+    },
+    {
+        type: 'input',
+        name: 'managerEmail',
+        message: "Team manager's Email",
+    },
+    {
+        type: 'input',
+        name: 'managerOffice',
+        message: "Team manager's Office Number",
+    }
+];
+
+const questionsEngineer = [
+    {
+        type: 'input',
+        name: 'engineerName',
+        message: "Engineer's Name",
+    },
+    {
+        type: 'input',
+        name: 'engineerId',
+        message: "Engineer's Id",
+    },
+    {
+        type: 'input',
+        name: 'engineerEmail',
+        message: "Engineer's Email",
+    },
+    {
+        type: 'input',
+        name: 'engineersGithub',
+        message: "Engineer's GitHub Username",
+    }
+];
+
+const questionsIntern = [
+    {
+        type: 'input',
+        name: 'internName',
+        message: "Engineer's Name",
+    },
+    {
+        type: 'input',
+        name: 'internId',
+        message: "Engineer's Id",
+    },
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: "Engineer's Email",
+    },
+    {
+        type: 'input',
+        name: 'internGithub',
+        message: "Engineer's GitHub username",
+    }
+];
+
+
+
+const questionsAction = [
+    {
+        type: 'list',
+        name: 'nextAction',
+        message: "What action do you want to perform next?",
+        choices: ['Add Engineer','Add Intern','Finish and show profile Team'];
+    }
+];
+
+
+
+
+function generateTeam (){
+
+
+
+
+}
+
 
 function init(){
 
