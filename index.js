@@ -169,10 +169,10 @@ inquirer.prompt (questionsManager)
         const manager = new Manager (data.managerName, data.managerId, data.managerEmail, data.managerOffice);
         console.log(manager);
         team.push(manager);
+        console.log(team);
         showNextAction();
 
     });
-
 
 }
 
