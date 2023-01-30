@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
-const team =[];
+const team = [];
 
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
@@ -92,7 +92,7 @@ const questionsActions = [
         type: 'list',
         name: 'nextAction',
         message: "What action do you want to perform next?",
-        choices: ['Add Engineer','Add Intern','Finish and show profile Team'],
+        choices: ['Add Engineer', 'Add Intern', 'Finish and show profile Team'],
     }
 ];
 
@@ -101,59 +101,43 @@ const questionsActions = [
 
 function addIntern() {
 
-    inquirer.prompt (questionsIntern) 
-    .then (data => {
-
-        const intern = new Intern (data.internName, data.internId, data.internEmail, data.internSchool);
-        team.push(intern);
-        showNextAction ();
-
-
-    });
+    inquirer.prompt(questionsIntern)
+        .then(data => {
+            const intern = new Intern(data.internName, data.internId, data.internEmail, data.internSchool);
+            team.push(intern);
+            showNextAction();
+        });
 
 };
 
 
 function addEngineer() {
 
-    inquirer.prompt (questionsEngineer) 
-    .then (data => {
-
-        
-        const engineer = new Engineer (data.engineerName, data.engineerId, data.engineerEmail, data.engineersGithub);
-        team.push(engineer);
-        showNextAction ();
-
-
-    });
+    inquirer.prompt(questionsEngineer)
+        .then(data => {
+            const engineer = new Engineer(data.engineerName, data.engineerId, data.engineerEmail, data.engineersGithub);
+            team.push(engineer);
+            showNextAction();
+        });
 
 };
 
 
-function showNextAction () {
+function showNextAction() {
 
-    inquirer.prompt (questionsActions) 
-        .then (data => {
+    inquirer.prompt(questionsActions)
+        .then(data => {
 
-            //s9elect answer
-            if (data.nextAction === 'Add Engineer'){
-                   
+            if (data.nextAction === 'Add Engineer') { 
                 addEngineer();
-               
-
-            } 
+             }
             else {
-               
-                if(data.nextAction === 'Add Intern'){
-                  
-                     addIntern();
-                }
-
-                else {
-                    
-                    console.log (team);
-
-                }
+                    if (data.nextAction === 'Add Intern') { 
+                            addIntern(); 
+                    }
+                    else {
+                        console.log(team);
+                    }
 
             };
 
@@ -162,27 +146,22 @@ function showNextAction () {
 }
 
 
-function generateTeam (){
+function getTeam() {
 
-inquirer.prompt (questionsManager)
-    .then(data => {
-
-       
-        const manager = new Manager (data.managerName, data.managerId, data.managerEmail, data.managerOffice);
-        team.push(manager);
-        showNextAction();
-
-    });
-
+    inquirer.prompt(questionsManager)
+        .then(data => {
+            const manager = new Manager(data.managerName, data.managerId, data.managerEmail, data.managerOffice);
+            team.push(manager);
+            showNextAction();
+        });
 }
 
 
-function init(){
+function init() {
 
     //Calls function to generate team from prompt ad then call function to render results on HTMl page
-    generateTeam()
-    
-    //.then(renderHTML);
+    getTeam()
+
 
 }
 
