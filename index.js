@@ -150,7 +150,8 @@ function showNextAction () {
                 }
 
                 else {
-                    //render
+                    
+                    console.log (team);
 
                 }
 
