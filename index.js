@@ -67,22 +67,22 @@ const questionsIntern = [
     {
         type: 'input',
         name: 'internName',
-        message: "Engineer's Name",
+        message: "Intern's Name",
     },
     {
         type: 'input',
         name: 'internId',
-        message: "Engineer's Id",
+        message: "Intern's Id",
     },
     {
         type: 'input',
         name: 'internEmail',
-        message: "Engineer's Email",
+        message: "Intern's Email",
     },
     {
         type: 'input',
         name: 'internGithub',
-        message: "Engineer's GitHub username",
+        message: "Intern's Shool",
     }
 ];
 
@@ -96,6 +96,38 @@ const questionsActions = [
 ];
 
 
+
+
+function addIntern() {
+
+    inquirer.prompt (questionsIntern) 
+    .then (data => {
+
+        //create object
+
+        showNextAction ();
+
+
+    });
+
+};
+
+
+function addEngineer() {
+
+    inquirer.prompt (questionsEngineer) 
+    .then (data => {
+
+        //create object
+
+        showNextAction ();
+
+
+    });
+
+};
+
+
 function showNextAction () {
 
     inquirer.prompt (questionsActions) 
@@ -105,9 +137,12 @@ function showNextAction () {
             if (data.nextAction === 'Add Engineer'){
                    
                 addEngineer();
+               
 
-            } else {
-                if(data.nextAction === 'Add Engineer'){
+            } 
+            else {
+               
+                if(data.nextAction === 'Add Intern'){
                   
                      addIntern();
                 }
