@@ -86,23 +86,54 @@ const questionsIntern = [
     }
 ];
 
-
-
-const questionsAction = [
+const questionsActions = [
     {
         type: 'list',
         name: 'nextAction',
         message: "What action do you want to perform next?",
-        choices: ['Add Engineer','Add Intern','Finish and show profile Team'];
+        choices: ['Add Engineer','Add Intern','Finish and show profile Team'],
     }
 ];
 
 
+function showNextAction () {
+
+    inquirer.prompt (questionsActions) 
+        .then (data => {
+
+            //s9elect answer
+            if (data.nextAction === 'Add Engineer'){
+                   
+                addEngineer();
+
+            } else {
+                if(data.nextAction === 'Add Engineer'){
+                  
+                     addIntern();
+                }
+
+                else {
+                    //render
+
+                }
+
+            };
+
+        });
+
+}
 
 
 function generateTeam (){
 
+inquirer.prompt (questionsManager)
+    .then(data => {
 
+        console.log(data);
+
+        showNextAction();
+
+    });
 
 
 }
@@ -111,7 +142,9 @@ function generateTeam (){
 function init(){
 
     //Calls function to generate team from prompt ad then call function to render results on HTMl page
-    generateTeam().then(renderHTML);
+    generateTeam()
+    
+    //.then(renderHTML);
 
 }
 
