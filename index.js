@@ -102,7 +102,18 @@ const questionsActions = [
 // Function to create README file
 function writeToFile(fileName, data) {
 
-  //Creates file using data
+    //Check if folder exist
+    if (!fs.existsSync(OUTPUT_DIR)) {
+        fs.mkdir(OUTPUT_DIR, (error) =>  {
+            
+            if(error){ return console.error(error.message); }
+            console.log('Output directory created successfully');
+          
+   
+    };
+    }
+
+    //Creates file using data
     fs.writeFile(fileName, data, (error) => {
         if (error) { return console.error(error.message); }
     });
@@ -148,8 +159,10 @@ function showNextAction() {
                     else {
 
                         const renderToHTML = render(team); 
-                        
-                        writeToFile(outputPath, renderToHTML);
+
+                       
+                     console.log(outputPath);
+                       // writeToFile(outputPath, renderToHTML);
                       
                        
                     }
