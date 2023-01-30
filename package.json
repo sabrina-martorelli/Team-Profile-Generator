@@ -21,5 +21,8 @@
   "homepage": "https://github.com/sabrina-martorelli/Team-Profile-Generator#readme",
   "dependencies": {
     "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "jest": "^29.4.1"
   }
 }
