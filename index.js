@@ -14,3 +14,13 @@ const render = require("./src/page-template.js");
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
 //separate functions in different files if needed. One per menu 
+
+function init(){
+
+    //Calls function to generate team from prompt ad then call function to render results on HTMl page
+    generateTeam().then(renderHTML);
+
+}
+
+
+init();
