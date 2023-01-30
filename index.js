@@ -99,6 +99,16 @@ const questionsActions = [
 
 
 
+// Function to create README file
+function writeToFile(fileName, data) {
+
+  //Creates file using data
+    fs.writeFile(fileName, data, (error) => {
+        if (error) { return console.error(error.message); }
+    });
+}
+
+
 function addIntern() {
 
     inquirer.prompt(questionsIntern)
@@ -136,7 +146,12 @@ function showNextAction() {
                             addIntern(); 
                     }
                     else {
-                        console.log(team);
+
+                        const renderToHTML = render(team); 
+                        
+                        writeToFile(outputPath, renderToHTML);
+                      
+                       
                     }
 
             };
