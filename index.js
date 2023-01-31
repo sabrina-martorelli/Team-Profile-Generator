@@ -44,14 +44,9 @@ const questionsManager = [
         name: 'managerEmail',
         message: "Team manager's email",
         validate: (managerEmail) => {
-
             emailOK = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(managerEmail)
-  
             if (!emailOK) return ('Please enter a valid email address (e.g., sabrina@gmail.com).')
-            
-            return true
-            
-            
+            return true    
         }
 
 
@@ -71,22 +66,39 @@ const questionsEngineer = [
     {
         type: 'input',
         name: 'engineerName',
-        message: "Engineer's Name",
+        message: "Engineer's name",
+        validate: (engineerName) => { 
+            if (!engineerName.length) return 'Please enter at least one character for the name (e.g., Jose P).' 
+            return true;
+        }
     },
     {
         type: 'input',
         name: 'engineerId',
-        message: "Engineer's Id",
+        message: "Engineer's id",
+        validate: (engineerId) => {
+            if (isNaN(engineerId)) return 'Please enter a valid id number (e.g., 543).'
+            return true;
+        }
     },
     {
         type: 'input',
         name: 'engineerEmail',
-        message: "Engineer's Email",
+        message: "Engineer's email",
+        validate: (engineerEmail) => {
+            emailOK = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(engineerEmail)
+            if (!emailOK) return ('Please enter a valid email address (e.g., josep@gmail.com).')
+            return true    
+        }
     },
     {
         type: 'input',
         name: 'engineersGithub',
-        message: "Engineer's GitHub Username",
+        message: "Engineer's github username",
+        validate: (engineersGithub) => { 
+            if (!engineersGithub.length) return 'Please enter at least one character for the github username (e.g., jose-p67).' 
+            return true;
+        }
     }
 ];
 
@@ -94,22 +106,40 @@ const questionsIntern = [
     {
         type: 'input',
         name: 'internName',
-        message: "Intern's Name",
+        message: "Intern's name",
+        validate: (internName) => { 
+            if (!internName.length) return 'Please enter at least one character for the name (e.g., Madison P).' 
+            return true;
+        }
+        
     },
     {
         type: 'input',
         name: 'internId',
-        message: "Intern's Id",
+        message: "Intern's id",
+        validate: (internId) => {
+            if (isNaN(internId)) return 'Please enter a valid id number (e.g., 987).'
+            return true;
+        }
     },
     {
         type: 'input',
         name: 'internEmail',
-        message: "Intern's Email",
+        message: "Intern's email",
+        validate: (internEmail) => {
+            emailOK = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(internEmail)
+            if (!emailOK) return ('Please enter a valid email address (e.g., madisonp@gmail.com).')
+            return true    
+        }
     },
     {
         type: 'input',
         name: 'internSchool',
-        message: "Intern's Shool",
+        message: "Intern's shool",
+        validate: (internSchool) => { 
+            if (!internSchool.length) return 'Please enter at least one character for the School name (e.g., Garden Grove).' 
+            return true;
+        }
     }
 ];
 
