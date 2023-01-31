@@ -23,6 +23,13 @@ const questionsManager = [
         type: 'input',
         name: 'managerName',
         message: "Team manager's Name",
+        validate: (managerName) => { 
+            if (!managerName.length) return 'Please enter at least one character.'
+           
+            return true;
+        }
+       
+
     },
     {
         type: 'input',
@@ -33,6 +40,18 @@ const questionsManager = [
         type: 'input',
         name: 'managerEmail',
         message: "Team manager's Email",
+        validate: (managerEmail) => {
+
+            valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(managerEmail)
+  
+            if (!valid) return ('Please enter a valid email address.')
+            
+            return true
+            
+            
+        }
+
+
     },
     {
         type: 'input',
