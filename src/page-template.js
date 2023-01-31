@@ -116,7 +116,9 @@ module.exports = team => {
             </div>
         </div>
     </div>
-    <div class="date h6">Team profile generated on ${date}.</div>
+    <footer class="footer py-3 date">
+    <div class="container h6">Team profile generated on ${date}.</div>
+    </footer>
 </body>
 </html>
     `;
