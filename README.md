@@ -32,6 +32,12 @@ This application will take in information about employees on a software engineer
 Use  command-line to enter team information. 
 First the information about the manager will be asked. Then, when next action is prompt, choose from "Add Engineer" or "Add Intern" to add more members of the team, or "Finish and show profile Team" if you want to finish the input and generate the final HTML file.
 
+ The application will be invoked by using the following command:
+
+```bash
+node index.js
+```
+
 ##  License 
 MIT License   
                         Copyright 2023 sabrina-martorelli   
