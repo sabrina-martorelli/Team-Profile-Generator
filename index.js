@@ -22,10 +22,9 @@ const questionsManager = [
     {
         type: 'input',
         name: 'managerName',
-        message: "Team manager's Name",
+        message: "Team manager's name",
         validate: (managerName) => { 
-            if (!managerName.length) return 'Please enter at least one character.'
-           
+            if (!managerName.length) return 'Please enter at least one character for the name (e.g., Sabrina M).' 
             return true;
         }
        
@@ -34,21 +33,21 @@ const questionsManager = [
     {
         type: 'input',
         name: 'managerId',
-        message: "Team manager's Id",
+        message: "Team manager's id",
         validate: (managerID) => {
-            if (isNaN(managerID)) return 'Please enter a valid number.'
+            if (isNaN(managerID)) return 'Please enter a valid id number (e.g., 456).'
             return true;
         }
     },
     {
         type: 'input',
         name: 'managerEmail',
-        message: "Team manager's Email",
+        message: "Team manager's email",
         validate: (managerEmail) => {
 
             emailOK = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(managerEmail)
   
-            if (!emailOK) return ('Please enter a valid email address.')
+            if (!emailOK) return ('Please enter a valid email address (e.g., sabrina@gmail.com).')
             
             return true
             
@@ -60,9 +59,9 @@ const questionsManager = [
     {
         type: 'input',
         name: 'managerOffice',
-        message: "Team manager's Office Number",
+        message: "Team manager's office number",
         validate: (managerOffice) => {
-            if (isNaN(managerOffice)) return 'Please enter a valid Office Number.'
+            if (isNaN(managerOffice)) return 'Please enter a valid office number (e.g., 404).'
             return true;
         }
     }
