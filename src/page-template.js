@@ -116,7 +116,7 @@ module.exports = team => {
             </div>
         </div>
     </div>
-    <div class="date">Team Profile generated on ${date}</div>
+    <div class="date h6">Team profile generated on ${date}.</div>
 </body>
 </html>
     `;

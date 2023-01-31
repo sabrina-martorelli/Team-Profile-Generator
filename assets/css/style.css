@@ -55,3 +55,14 @@ body{
     text-decoration: underline;
     color: var(--secondary) !important;
 }
+
+.date {
+
+    background-color: var(--quaternary) !important;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+   
+    margin-top: 3rem;
+    color: #fff;
+    text-align: right !important;
+}
