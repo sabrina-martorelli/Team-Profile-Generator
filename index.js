@@ -35,7 +35,7 @@ const questionsManager = [
         name: 'managerId',
         message: "Team manager's id",
         validate: (managerID) => {
-            if (isNaN(managerID)) return 'Please enter a valid id number (e.g., 456).'
+            if ((isNaN(managerID)) || (!(managerID.trim().length))) return 'Please enter a valid id number (e.g., 456).'
             return true;
         }
     },
@@ -56,7 +56,7 @@ const questionsManager = [
         name: 'managerOffice',
         message: "Team manager's office number",
         validate: (managerOffice) => {
-            if (isNaN(managerOffice)) return 'Please enter a valid office number (e.g., 404).'
+            if ((isNaN(managerOffice)) || (!(managerOffice.trim().length))) return 'Please enter a valid office number (e.g., 404).'
             return true;
         }
     }
@@ -77,7 +77,7 @@ const questionsEngineer = [
         name: 'engineerId',
         message: "Engineer's id",
         validate: (engineerId) => {
-            if (isNaN(engineerId)) return 'Please enter a valid id number (e.g., 543).'
+            if ((isNaN(engineerId)) || (!(engineerId.trim().length)) )  return 'Please enter a valid id number (e.g., 543).'
             return true;
         }
     },
@@ -118,7 +118,7 @@ const questionsIntern = [
         name: 'internId',
         message: "Intern's id",
         validate: (internId) => {
-            if (isNaN(internId)) return 'Please enter a valid id number (e.g., 987).'
+            if ((isNaN(internId)) || (!(internId.trim().length)) )  return 'Please enter a valid id number (e.g., 987).'
             return true;
         }
     },
