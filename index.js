@@ -42,9 +42,9 @@ const questionsManager = [
         message: "Team manager's Email",
         validate: (managerEmail) => {
 
-            valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(managerEmail)
+            emailOK = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(managerEmail)
   
-            if (!valid) return ('Please enter a valid email address.')
+            if (!emailOK) return ('Please enter a valid email address.')
             
             return true
             
