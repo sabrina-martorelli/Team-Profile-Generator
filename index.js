@@ -35,6 +35,10 @@ const questionsManager = [
         type: 'input',
         name: 'managerId',
         message: "Team manager's Id",
+        validate: (managerID) => {
+            if (isNaN(managerID)) return 'Please enter a valid number.'
+            return true;
+        }
     },
     {
         type: 'input',
