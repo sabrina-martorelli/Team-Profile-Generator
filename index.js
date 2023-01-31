@@ -214,10 +214,8 @@ function showNextAction() {
                     else {
 
                     const renderToHTML = render(team); 
-   
-                      
-                      outputHTML(outputPath, renderToHTML);
-                      
+                    outputHTML(outputPath, renderToHTML);
+                    console.log ('Thank you for using this app. Please visit output/team.html to see the new Team Profile.');  
                        
                     }
 
