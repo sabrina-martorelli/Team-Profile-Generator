@@ -1,3 +1,7 @@
+
+  //Use of moment.js package to add current year to licenses
+  const moment = require("moment");
+  const date = moment().format('MMMM Do YYYY, h:mm:ss a');
 // creates the team
 const generateTeam = team => {
 
@@ -112,6 +116,7 @@ module.exports = team => {
             </div>
         </div>
     </div>
+    <div class="date">Team Profile generated on ${date}</div>
 </body>
 </html>
     `;

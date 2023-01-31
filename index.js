@@ -13,6 +13,8 @@ const render = require("./src/page-template.js");
 const team = [];
 
 
+
+
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
 
@@ -214,6 +216,7 @@ function showNextAction() {
                     }
                     else {
 
+                    
                     const renderToHTML = render(team); 
                     outputHTML(outputPath, renderToHTML);
                     console.log ('Thank you for using this app. Please visit output/team.html to see the new Team Profile.');  
