@@ -1,49 +1,57 @@
+
+/* VARIABLES */
+:root {
+    --primary: #6B8996;
+    --secondary: #74706a ;
+    --tertiary: #CAC3B8;
+    --quaternary:  #839A9B; ;
+
+  }
+
+  
+
+/*RESETS*/
 body{
-
     background-color:   #edf5f5;
-
 }
 
-
+/**** CUSTOM STYLES ****/
 .team-area{
-
     flex-wrap: wrap;
-
 }
 
 .team-heading{
-
-    background-color: #6B8996 ;
+    background-color: var(--primary) !important;
     color: #fff;
 }
 
 .container-fluid{
-
-    background-color: #839A9B;
+    background-color: var(--quaternary) !important;
     padding-bottom: 0.5rem;
     margin-bottom: 3rem;
 }
 
 .employee-card{
-
-
-   
   min-width: 300px; 
   margin: 1rem;
-
-
 }
 
-
-
-
 .card-header{
-    background-color:#74706a;
-    color: #fff;
-    
+    background-color:var(--secondary) !important;
+    color: #fff;    
 }
 
 .card-body{
-    background-color:#CAC3B8;
-    
+    background-color: var(--tertiary) !important; 
+}
+
+.card-body a {
+    text-decoration: none;
+    color: var(--primary-color) !important;    
+}
+
+
+.card-body a:hover {    
+    text-decoration: underline;
+    color: var(--secondary) !important;
 }
