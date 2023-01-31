@@ -61,6 +61,10 @@ const questionsManager = [
         type: 'input',
         name: 'managerOffice',
         message: "Team manager's Office Number",
+        validate: (managerOffice) => {
+            if (isNaN(managerOffice)) return 'Please enter a valid Office Number.'
+            return true;
+        }
     }
 ];
 
